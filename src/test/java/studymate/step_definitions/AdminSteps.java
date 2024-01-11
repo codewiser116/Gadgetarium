@@ -42,8 +42,8 @@ public class AdminSteps {
 
         Faker faker = new Faker();
 
-        courseName = faker.educator().course();
-        String description = faker.book().title();
+        courseName = faker.job().field();
+        String description = faker.job().keySkills();
 
         /*
         this will get today's date in MM/dd/yyyy format
@@ -60,6 +60,32 @@ public class AdminSteps {
     @Then("verify the course is created")
     public void verify_the_course_is_created() {
         Assert.assertTrue(coursesPage.isCourseCreated(courseName));
+    }
+
+    @Then("admin goes to Teachers page")
+    public void admin_goes_to_teachers_page() {
+        commonsPage.teachersTab.click();
+    }
+
+    @Then("creates a teacher")
+    public void creates_a_teacher() {
+        Faker faker = new Faker();
+
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String phoneNumber = faker.phoneNumber().cellPhone();
+        String email = faker.internet().emailAddress();
+        String specialization = faker.job().position();
+
+
+        teachersPage.createATeacher(firstName, lastName, phoneNumber, email, specialization, courseName);
+
+
+    }
+
+    @Then("verify the teacher is created")
+    public void verify_the_teacher_is_created() {
+
     }
 
 }

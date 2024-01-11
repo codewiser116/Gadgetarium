@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumberReport.html","json:target/report.json"},
         features = "src/test/resources/features/studymate",
         glue = "studymate/step_definitions",
-        tags = "@adminCourse",
-        dryRun = true
+        tags = "@adminTeacher",
+        dryRun = false
 )
 public class StudymateCucumberRunner {
 }
