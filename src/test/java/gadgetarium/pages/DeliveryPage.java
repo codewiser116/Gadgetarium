@@ -1,4 +1,4 @@
-package pages;
+package gadgetarium.pages;
 
 public class DeliveryPage {
 }
