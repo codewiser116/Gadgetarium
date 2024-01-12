@@ -16,6 +16,9 @@ public class SampleSteps {
     CommonPage commonPage = new CommonPage(driver);
 
 
+    /**
+     *
+     */
     @Given("admin is logged in to the system")
     public void admin_is_logged_in_to_the_system() {
         System.out.println("Admin is logged in to the system");
@@ -111,6 +114,25 @@ public class SampleSteps {
             System.out.println(user + " logged in");
         }
     }
+
+    @Given("user is on {string}")
+    public void user_is_on(String string) {
+
+    }
+    @When("user enters product {string}")
+    public void user_enters_product(String string) {
+
+    }
+    @Then("verify search results display {string}")
+    public void verify_search_results_display(String string) {
+
+    }
+
+    @Then("user adds {string} {string}")
+    public void user_adds(String string, String string2) {
+
+    }
+
 
 
 
